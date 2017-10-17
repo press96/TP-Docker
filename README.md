@@ -14,11 +14,11 @@ $git clone [lien du répertoire/dossier à dockeriser]
 # Toujours dans les répertoires tomcat & postgres jai créée dans chacun un fichier Dockerfile : 
 $vi Dockerfile
 
-# Dans le Dockerfile de tomcat entrer :  
+# Dans le Dockerfile de tomcat enregistrer :  
 FROM tomcat:8-jre8      
 COPY ./fichier_code_copié /usr/local/tomcat/webapps
 
-# Dans le Dokerfile de postgres entrer :  
+# Dans le Dokerfile de postgres enregistrer :  
 FROM postgres:9.5   
 COPY ./ficher_sql_copié /docker-entrypoint-initdb.d/  
 
