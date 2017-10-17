@@ -15,7 +15,7 @@ $git clone [lien du répertoire/dossier à dockeriser]
 $vi Dockerfile
 
 # Dans le Dockerfile de tomcat entrer :  
-FROM tomcat:8-jre8 
+FROM tomcat:8-jre8      
 COPY ./fichier_code_copié /usr/local/tomcat/webapps
 
 # Dans le Dokerfile de postgres entrer :  
