@@ -19,7 +19,7 @@ FROM tomcat:8-jre8
 COPY ./fichier_code_copié /usr/local/tomcat/webapps
 
 # Dans le Dokerfile de postgres entrer :  
-FROM postgres:9.5 
+FROM postgres:9.5   
 COPY ./ficher_sql_copié /docker-entrypoint-initdb.d/  
 
 # maintenant construire limage postgres :
@@ -36,7 +36,7 @@ $docker images
 $docker run -d --name donner_un_nom_au_container nom_de_limage_postgres
 
 - Pour le tomcat :
-$docker run -d --name donner_un_nom_au_container -p choix_du_port:8080 -link nom_du_container_postgres nom_de_limage_tomcat
+$docker run -d --name donner_un_nom_au_container -p choix_du_port:8080 --link nom_du_container_postgres nom_de_limage_tomcat
 
 NB : Pour vérifier si les containers sont bien en cours dexécution entrer la commande suivante :  
 $docker ps
